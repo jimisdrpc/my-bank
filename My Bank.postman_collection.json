@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "3de680d1-e0e0-4511-9819-628f4c67388f",
+		"name": "My Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Fulano1\",\r\n    \"cpf\": \"12345678902\",\r\n    \"birthDate\": \"1978-04-04\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2000/persons",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"balance\":\"1000.00\",\r\n\"dailyWithdrawalLimit\":\"10.00\",\r\n\"active\":\"true\",\r\n\"accountType\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2000/accounts/1",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"accounts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Withdrawal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:2000/transactions/1/withdrawal/1.23",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"transactions",
+						"1",
+						"withdrawal",
+						"1.23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Credit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:2000/transactions/1/credit/2.34",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"transactions",
+						"1",
+						"credit",
+						"2.34"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bank Statement",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fromDate\":\"2020-08-02\",\r\n    \"toDate\":\"2020-08-03\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2000/transaction/1/bankstatement",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"transaction",
+						"1",
+						"bankstatement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Account Block",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:2000/accounts/block/1",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"accounts",
+						"block",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

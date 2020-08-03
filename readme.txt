@@ -10,7 +10,7 @@ mvn spring-boot:run
 
 Scripts de criação completo em DB Script.txt
 
-4 - Sugestão de execução com curl
+4 - Sugestão de execução com curl abaixo ou collection do Postman na raiz do repositório
 
 Passo 1: criar pessoas
 
